@@ -1,6 +1,6 @@
 import { GoogleGenerativeAI } from "@google/generative-ai";
 
-const genAI = new GoogleGenerativeAI("AIzaSyDIMCJnXTMOzyK86VUHeSPHyUTQKAw5xfE");
+const genAI = new GoogleGenerativeAI("AIzaSyBPDjB0qOQZb4bQZTgv-pXn9VDh3wvs7P4");
 
 export const getChatResponse = async (message: string): Promise<string> => {
   try {
