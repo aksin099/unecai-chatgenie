@@ -10,6 +10,9 @@ export const getChatResponse = async (message: string): Promise<string> => {
     return response.text();
   } catch (error) {
     console.error("Gemini API xətası:", error);
+    if (error instanceof Error && error.message.includes("API key")) {
+      throw new Error("API açarı etibarsızdır. Zəhmət olmasa sistem administratoru ilə əlaqə saxlayın.");
+    }
     throw new Error("Mesajınız göndərilə bilmədi. Xahiş edirik yenidən cəhd edin.");
   }
 };
