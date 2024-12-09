@@ -2,6 +2,7 @@ import { useState } from "react";
 import { ChatMessage } from "@/components/ChatMessage";
 import { ChatInput } from "@/components/ChatInput";
 import { useToast } from "@/components/ui/use-toast";
+import { getChatResponse } from "@/utils/gemini";
 
 interface Message {
   content: string;
@@ -21,27 +22,24 @@ const Index = () => {
   const handleSendMessage = async (content: string) => {
     try {
       setIsLoading(true);
-      // Add user message
       setMessages((prev) => [...prev, { content, isBot: false }]);
 
-      // TODO: Implement Gemini API call here
-      // For now, we'll simulate a response
-      setTimeout(() => {
-        setMessages((prev) => [
-          ...prev,
-          {
-            content: "Bu xüsusiyyət tezliklə əlavə olunacaq.",
-            isBot: true,
-          },
-        ]);
-        setIsLoading(false);
-      }, 1000);
+      const response = await getChatResponse(content);
+      
+      setMessages((prev) => [
+        ...prev,
+        {
+          content: response,
+          isBot: true,
+        },
+      ]);
     } catch (error) {
       toast({
         variant: "destructive",
         title: "Xəta baş verdi",
-        description: "Mesajınız göndərilə bilmədi. Yenidən cəhd edin.",
+        description: error instanceof Error ? error.message : "Bilinməyən xəta baş verdi",
       });
+    } finally {
       setIsLoading(false);
     }
   };
