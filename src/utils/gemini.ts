@@ -29,7 +29,7 @@ export const getChatResponse = async (message: string): Promise<string> => {
     Təhsil məlumatları:
     - UNEC-in Bakıda 4 tədris binası var
     - Tələbələr üçün şəxsi kabinet sistemi mövcuddur
-    - 600+ bal toplayanlar üçün xüsusi təqaüd (ilk semestr): 275 AZN (əlaçı təqaüdü + 100 AZN əlavə)
+    - 600+ bal toplayanlar üçün xüsusi təqaüd (ilk semestr): əlaçı təqaüdü (175 AZN) və 100 AZN əlavə
     
     Xüsusi təlimatlar:
     1. Həmişə dəqiq və faktiki məlumatlar ver
