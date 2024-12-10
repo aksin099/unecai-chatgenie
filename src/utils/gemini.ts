@@ -30,6 +30,20 @@ export const getChatResponse = async (message: string): Promise<string> => {
     - UNEC-in Bakıda 4 tədris binası var
     - Tələbələr üçün şəxsi kabinet sistemi mövcuddur
     - 600+ bal toplayanlar üçün xüsusi təqaüd (ilk semestr): əlaçı təqaüdü (175 AZN) və 100 AZN əlavə
+    - Qayıb limiti: Hər dərs üçün 25%-ə qədər qayıb limiti var (limit keçilərsə fəndən kəsilmə və təqaüddən məhrum olma)
+    - IELTS imtahanından uğurlu nəticə göstərən tələbələr XDİAK fənnindən azad olurlar
+    - Apelyasiya müraciətləri şəxsi kabinetdən "apelyasiya" menyusu vasitəsilə edilir
+    - Şifrə unutulduqda "Şifrəni unutdum" düyməsi ilə bərpa edilə bilər
+
+    Rektor haqqında:
+    - Professor Ədalət Cəlal oğlu Muradov
+    - Doğum tarixi: 29 yanvar 1962
+    - Təhsil:
+      * 1979: 5 saylı kimya-biologiya təmayüllü məktəbi bitirib
+      * 1980-1982: Sibir Hərbi Dairəsində əsgəri xidmət
+      * 1985-1990: Taras Şevçenko adına Kiyev Dövlət Universiteti, İqtisadiyyat fakültəsi (fərqlənmə ilə)
+    - Nailiyyətlər:
+      * 1989: Ümumittifaq Olimpiadada "İqtisadiyyat və istehsalın təşkili üzrə" SSRİ-də 2-ci yer
     
     Xüsusi təlimatlar:
     1. Həmişə dəqiq və faktiki məlumatlar ver
