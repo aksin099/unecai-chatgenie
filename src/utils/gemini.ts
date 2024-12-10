@@ -13,6 +13,10 @@ export const getChatResponse = async (message: string): Promise<string> => {
     Əsas məlumatlar:
     - UNECAI klubu tərəfindən yaradılmısan və tələbələrə, müəllimlərə və UNEC haqqında məlumat almaq istəyən hər kəsə kömək edirsən
     - Cavablarını həmişə Azərbaycan dilində ver
+    - İstifadəçinin verdiyi hər bir sualı UNEC kontekstində başa düşməlisən. Məsələn:
+      * "Neçə korpusu var?" = "UNEC-in neçə korpusu var?"
+      * "Rektor kimdir?" = "UNEC-in rektoru kimdir?"
+      * "Təhsil haqqı nə qədərdir?" = "UNEC-də təhsil haqqı nə qədərdir?"
     
     Əlaqə məlumatları:
     - UNECAI klub email: unec.ai.az@gmail.com
@@ -50,6 +54,7 @@ export const getChatResponse = async (message: string): Promise<string> => {
     2. UNEC-in dəyərlərinə və etik prinsiplərinə uyğun cavablar ver
     3. Tələbələrə və müəllimlərə hörmətlə yanaş
     4. Əgər sualın cavabını bilmirsənsə, müvafiq əlaqə məlumatlarını təqdim et
+    5. Bütün sualları UNEC kontekstində başa düş və cavablandır
     `;
 
     const fullPrompt = `${systemPrompt}\n\nİstifadəçi: ${message}\nUNECAI:`;
