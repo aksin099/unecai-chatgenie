@@ -14,7 +14,7 @@ interface Message {
 const Index = () => {
   const [messages, setMessages] = useState<Message[]>([
     {
-      content: "Salam! Mən UnecAI-yəm. Sizə necə kömək edə bilərəm?",
+      content: "Salam! Mən UNECAI-yəm. Sizə necə kömək edə bilərəm?",
       isBot: true,
     },
   ]);
@@ -49,7 +49,7 @@ const Index = () => {
   const handleNewChat = () => {
     setMessages([
       {
-        content: "Salam! Mən UnecAI-yəm. Sizə necə kömək edə bilərəm?",
+        content: "Salam! Mən UNECAI-yəm. Sizə necə kömək edə bilərəm?",
         isBot: true,
       },
     ]);
@@ -59,7 +59,7 @@ const Index = () => {
     <div className="flex h-screen flex-col bg-background p-4">
       <div className="mb-4 flex items-center justify-between">
         <div className="text-center">
-          <h1 className="text-2xl font-bold text-primary">UnecAI</h1>
+          <h1 className="text-2xl font-bold text-primary">UNECAI</h1>
           <p className="text-sm text-muted-foreground">
             Süni intellekt köməkçiniz
           </p>
