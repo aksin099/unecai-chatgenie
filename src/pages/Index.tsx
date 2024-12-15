@@ -74,12 +74,8 @@ const Index = () => {
         </Button>
       </div>
 
-      <div className="mx-auto mb-4 w-full max-w-3xl">
-        <ChatInput onSend={handleSendMessage} disabled={isLoading} />
-      </div>
-
-      <div className="flex-1 overflow-y-auto">
-        <div className="space-y-4 pb-4">
+      <div className="flex flex-1 flex-col justify-between">
+        <div className="flex-1 space-y-4 overflow-y-auto pb-4">
           {messages.map((message, index) => (
             <ChatMessage
               key={index}
@@ -87,6 +83,10 @@ const Index = () => {
               isBot={message.isBot}
             />
           ))}
+        </div>
+
+        <div className="mx-auto w-full max-w-3xl">
+          <ChatInput onSend={handleSendMessage} disabled={isLoading} />
         </div>
       </div>
     </div>
