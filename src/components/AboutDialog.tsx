@@ -3,6 +3,7 @@ import {
   DialogContent,
   DialogHeader,
   DialogTitle,
+  DialogDescription,
 } from "@/components/ui/dialog"
 
 interface AboutDialogProps {
@@ -16,6 +17,9 @@ export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
       <DialogContent className="sm:max-w-[425px]">
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-bold text-primary">Haqqında</DialogTitle>
+          <DialogDescription className="text-center text-sm text-muted-foreground">
+            UNECAİ layihəsi haqqında məlumat
+          </DialogDescription>
         </DialogHeader>
         <div className="space-y-4 p-4 text-center">
           <p className="text-sm text-muted-foreground">
