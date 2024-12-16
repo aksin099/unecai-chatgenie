@@ -14,7 +14,7 @@ interface AboutDialogProps {
 export function AboutDialog({ open, onOpenChange }: AboutDialogProps) {
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
-      <DialogContent className="sm:max-w-[425px]">
+      <DialogContent className="sm:max-w-[425px] z-50">
         <DialogHeader>
           <DialogTitle className="text-center text-xl font-bold text-primary">Haqqında</DialogTitle>
           <DialogDescription className="text-center text-sm text-muted-foreground">
