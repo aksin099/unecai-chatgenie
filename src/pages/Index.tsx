@@ -84,7 +84,7 @@ const Index = () => {
           <Button
             onClick={handleNewChat}
             variant="outline"
-            className="gap-2 transition-all hover:bg-primary hover:text-primary-foreground"
+            className="gap-2 transition-all hover:bg-primary hover:text-primary-foreground text-sm md:text-base h-8 md:h-10 px-2 md:px-4"
           >
             <MessageSquarePlus className="h-4 w-4" />
             Yeni söhbət
