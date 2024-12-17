@@ -11,7 +11,6 @@ import {
   DropdownMenuItem,
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
-import { AboutDialog } from "@/components/AboutDialog";
 
 interface Message {
   content: string;
@@ -26,7 +25,6 @@ const Index = () => {
     },
   ]);
   const [isLoading, setIsLoading] = useState(false);
-  const [showAbout, setShowAbout] = useState(false);
   const { toast } = useToast();
 
   const handleSendMessage = async (content: string) => {
@@ -71,6 +69,10 @@ const Index = () => {
     window.location.href = "mailto:unec.ai.az@gmail.com";
   };
 
+  const handleOpenAbout = () => {
+    window.open("/about", "_blank");
+  };
+
   return (
     <div className="flex h-screen flex-col bg-background p-4">
       <div className="mb-4 flex items-center justify-between">
@@ -96,7 +98,7 @@ const Index = () => {
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
-              <DropdownMenuItem onClick={() => setShowAbout(true)}>
+              <DropdownMenuItem onClick={handleOpenAbout}>
                 Haqqında
               </DropdownMenuItem>
               <DropdownMenuItem onClick={handleOpenWebsite}>
@@ -125,8 +127,6 @@ const Index = () => {
           <ChatInput onSend={handleSendMessage} disabled={isLoading} />
         </div>
       </div>
-
-      <AboutDialog open={showAbout} onOpenChange={setShowAbout} />
     </div>
   );
 };
